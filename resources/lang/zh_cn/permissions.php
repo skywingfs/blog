@@ -19,6 +19,11 @@ return [
     'update_article' => '更新文章',
     'destroy_article' => '删除文章',
 
+    // BOOK
+    'list_book' => '图书列表',
+    'create_book' => '创建图书',
+
+
     // Discussion
     'list_discussion' => '讨论列表',
     'create_discussion' => '创建讨论',

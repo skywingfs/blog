@@ -50,6 +50,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'setting'], function () {
 // Link
 Route::get('link', 'LinkController@index');
 
+
 // Category
 Route::group(['prefix' => 'category'], function () {
     Route::get('{category}', 'CategoryController@show');
@@ -67,6 +68,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
    Route::get('{path?}', 'HomeController@dashboard')->where('path', '[\/\w\.-]*');
 });
 
-// Article
+// Article(路由放这下面会404。。路由还是放上面吧。。)
 Route::get('/', 'ArticleController@index');
 Route::get('{slug}', 'ArticleController@show');

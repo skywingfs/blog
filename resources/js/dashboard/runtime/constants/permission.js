@@ -11,6 +11,10 @@ export default {
   UPDATE_ARTICLE: 'update_article',
   DESTROY_ARTICLE: 'destroy_article',
 
+  // Book
+  LIST_BOOK: 'list_book',
+  CREATE_BOOK: 'create_book',
+
   // Discussion
   LIST_DISCUSSION: 'list_discussion',
   CREATE_DISCUSSION: 'create_discussion',
@@ -57,5 +61,5 @@ export default {
   LIST_VISITOR: 'list_visitor',
 
   // System
-  LIST_SYSTEM_INFO: 'list_system_info',
+  LIST_SYSTEM_INFO: 'list_system_info'
 }
