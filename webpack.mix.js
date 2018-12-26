@@ -58,7 +58,7 @@ mix.js('resources/js/app.js', 'public/js')
     // .js('resources/js/vendor/masonry.js', 'public/js')
 
 if (mix.inProduction()) {
-    mix.version()
+    mix.version();
     mix.webpackConfig({
         plugins: [
             new OptimizeCSSPlugin({
