@@ -59,18 +59,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 if (mix.inProduction()) {
     mix.version();
-    mix.webpackConfig({
-        plugins: [
-            new OptimizeCSSPlugin({
-                cssProcessorOptions: {
-                    safe: true,
-                    discardComments: {
-                        removeAll: true
-                    }
-                }
-            })
-        ]
-    });
     mix.options({
         uglify: {
             uglifyOptions: {
