@@ -41,6 +41,9 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+            'dump' => [
+                'dump_binary_path' => '/usr/bin'
+            ],
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),

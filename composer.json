@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1.3",
+        "barryvdh/laravel-ide-helper": "^2.5",
         "dflydev/apache-mime-types": "^1.0",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "~4.0",
@@ -19,17 +20,22 @@
         "laravel/tinker": "~1.0",
         "league/fractal": "^0.17",
         "league/html-to-markdown": "^4.8",
+        "littlesqx/douban-book": "^1.0",
         "predis/predis": "^1.1",
+        "skywing/douban-resource": "^1.0",
+        "spatie/laravel-backup": "^5.11",
         "spatie/laravel-permission": "^2.23",
         "yzalis/identicon": "^1.2"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.0",
+        "xethron/migrations-generator": "^2.0"
     },
     "autoload": {
         "classmap": [

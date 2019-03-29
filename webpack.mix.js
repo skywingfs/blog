@@ -1,6 +1,5 @@
 const {mix} = require('laravel-mix');
 const path = require('path');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -38,7 +37,6 @@ if (!process.argv.includes('--hot')) {
     })
 }
 
-mix.webpackConfig(config)
 
 let themes = [
     'resources/sass/themes/default-theme.scss',
@@ -75,3 +73,5 @@ if (mix.inProduction()) {
     });
 
 }
+
+mix.webpackConfig(config)

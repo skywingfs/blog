@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
+
 class BookController extends Controller
 {
     /**
@@ -11,8 +13,8 @@ class BookController extends Controller
      */
     public function index()
     {
-
-        return view('book.index');
+        $books = Book::orderBy('sort', 'desc')->get();
+        return view('book.index',compact('books'));
     }
 
 

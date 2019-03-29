@@ -50,6 +50,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'setting'], function () {
 // Link
 Route::get('link', 'LinkController@index');
 
+// Book
+Route::get('book', 'BookController@index');
+
 
 // Category
 Route::group(['prefix' => 'category'], function () {

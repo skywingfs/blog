@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Book;
 use App\Scopes\DraftScope;
 use Illuminate\Http\Request;
-use Littlesqx\Book\Application;
 use Skywing\Douban\Douban;
 
 class BookController extends ApiController
@@ -35,6 +34,7 @@ class BookController extends ApiController
         $req = $request->all();
         $douban = new Douban();
         $book = $douban->getBook($req['isbn13']);
+
         if ($book) {
             $book = $book->toArray();
             $book['author'] = rtrim(implode(",", $book['author']), ',');
@@ -46,6 +46,8 @@ class BookController extends ApiController
             unset($book['cover']);
             unset($book['isbn']);
             unset($book['publication_date']);
+            dump($book);exit;
+
 //            dump($book);
             $new_book = Book::create($book);
             return $this->response->withNoContent();
