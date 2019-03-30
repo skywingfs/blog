@@ -46,9 +46,7 @@ class BookController extends ApiController
             unset($book['cover']);
             unset($book['isbn']);
             unset($book['publication_date']);
-            dump($book);exit;
-
-//            dump($book);
+//            dump($book);exit;
             $new_book = Book::create($book);
             return $this->response->withNoContent();
         }
