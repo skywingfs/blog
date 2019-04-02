@@ -13,6 +13,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">{{ lang('Articles') }}</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('discussion') }}">{{ lang('Discussions') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('book') }}">读书计划墙</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
