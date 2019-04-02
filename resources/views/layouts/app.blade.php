@@ -25,7 +25,15 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d600ffe632d2502d33a3fa7ee8143ced";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     @yield('styles')
 </head>
 <body>
