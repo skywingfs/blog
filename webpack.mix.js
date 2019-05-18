@@ -16,10 +16,11 @@ let config = {
     // plugins: [
     //     new BundleAnalyzerPlugin(),
     // ],
-    externals: {
-        jquery: 'jQuery',
-        vue:'Vue'
-    },
+    // 可以去除用cdn
+    // externals: {
+    //     jquery: 'jQuery',
+    //     vue:'Vue'
+    // },
     resolve: {
         alias: {
             'config': 'js/config',
@@ -66,7 +67,7 @@ mix.js('resources/js/app.js', 'public/js')
 // .js('resources/js/vendor/jquery-3.3.1.min.js', 'public/js')
 // .js('resources/js/vendor/imagesloaded.min.js', 'public/js')
 // .js('resources/js/vendor/masonry.js', 'public/js')
-// mix.extract(['jquery','vue','bootstrap']);
+   .extract(['jquery','vue','bootstrap','emojione','fine-uploader']);
 
 // mix.autoload({
 //     jquery: ['$', 'window.jQuery', 'jQuery', 'jquery'],

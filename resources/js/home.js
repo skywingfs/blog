@@ -18,10 +18,14 @@ Vue.use(httpPlugin);
 Vue.config.lang = window.Language;
 
 const i18n = new VueI18n({
-  locale: Vue.config.lang,
-  messages: locales
+    locale: Vue.config.lang,
+    messages: locales
 })
 
+// const Comment =()=>import('home/components/Comment.vue')
+// const Parse =()=>import('home/components/Parse.vue')
+// const Textarea =()=>import('home/components/Textarea.vue')
+// const Avatar =()=>import('home/components/AvatarUpload.vue')
 Vue.component('comment', require('home/components/Comment.vue'));
 
 Vue.component('parse', require('home/components/Parse.vue'));
@@ -31,5 +35,5 @@ Vue.component('parse-textarea', require('home/components/Textarea.vue'));
 Vue.component('avatar', require('home/components/AvatarUpload.vue'));
 
 new Vue({
-  i18n: i18n,
+    i18n: i18n,
 }).$mount('#app');

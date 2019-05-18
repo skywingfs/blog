@@ -36,7 +36,8 @@
     "vue-multiselect": "^2.0.8",
     "vue-router": "^2.8.1",
     "vue-waterfall-easy": "^2.4.3",
-    "vuex": "^2.5.0"
+    "vuex": "^2.5.0",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",

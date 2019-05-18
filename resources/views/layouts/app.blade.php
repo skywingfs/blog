@@ -48,8 +48,13 @@
     </div>
 
     <!-- Scripts -->
+    <script src="{{ mix('js/manifest.js')}}"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
+    <script src="https://cdn.bootcss.com/emojione/2.2.7/lib/js/emojione.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="{{ mix('js/vendor.js')}}"></script>
     <script src="{{ mix('js/home.js') }}"></script>
 
     @yield('scripts')
