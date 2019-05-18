@@ -54,6 +54,7 @@
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
     <script src="https://cdn.bootcss.com/emojione/2.2.7/lib/js/emojione.min.js"></script>
     <script src="https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/file-uploader/5.16.2/fine-uploader.min.js"></script>
     <script src="{{ mix('js/vendor.js')}}"></script>
     <script src="{{ mix('js/home.js') }}"></script>
 

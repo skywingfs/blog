@@ -20,7 +20,9 @@ let config = {
     externals: {
         jquery: 'jQuery',
         vue:'Vue',
-        emojione:'emojione'
+        emojione:'emojione',
+        highlight:'highlight',
+        FineUploader:'fine-uploader'
     },
     resolve: {
         alias: {
@@ -68,7 +70,7 @@ mix.js('resources/js/app.js', 'public/js')
 // .js('resources/js/vendor/jquery-3.3.1.min.js', 'public/js')
 // .js('resources/js/vendor/imagesloaded.min.js', 'public/js')
 // .js('resources/js/vendor/masonry.js', 'public/js')
-   .extract(['bootstrap','fine-uploader']);
+   .extract(['bootstrap']);
 
 // mix.autoload({
 //     jquery: ['$', 'window.jQuery', 'jQuery', 'jquery'],
