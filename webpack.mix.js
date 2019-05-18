@@ -19,7 +19,8 @@ let config = {
     // 可以去除用cdn
     externals: {
         jquery: 'jQuery',
-        vue:'Vue'
+        vue:'Vue',
+        emojione:'emojione'
     },
     resolve: {
         alias: {
@@ -67,7 +68,7 @@ mix.js('resources/js/app.js', 'public/js')
 // .js('resources/js/vendor/jquery-3.3.1.min.js', 'public/js')
 // .js('resources/js/vendor/imagesloaded.min.js', 'public/js')
 // .js('resources/js/vendor/masonry.js', 'public/js')
-   .extract(['bootstrap','emojione','fine-uploader']);
+   .extract(['bootstrap','fine-uploader']);
 
 // mix.autoload({
 //     jquery: ['$', 'window.jQuery', 'jQuery', 'jquery'],
