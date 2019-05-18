@@ -48,6 +48,8 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <script src="{{ mix('js/home.js') }}"></script>
 
     @yield('scripts')

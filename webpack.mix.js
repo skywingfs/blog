@@ -1,5 +1,7 @@
-const {mix} = require('laravel-mix');
+const mix = require('laravel-mix');
 const path = require('path');
+const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +13,13 @@ const path = require('path');
  |
  */
 let config = {
+    // plugins: [
+    //     new BundleAnalyzerPlugin(),
+    // ],
+    externals: {
+        jquery: 'jQuery',
+        vue:'Vue'
+    },
     resolve: {
         alias: {
             'config': 'js/config',
@@ -26,6 +35,7 @@ let config = {
             path.resolve(__dirname, "resources")
         ]
     },
+
 }
 
 if (!process.argv.includes('--hot')) {
@@ -36,7 +46,9 @@ if (!process.argv.includes('--hot')) {
         }
     })
 }
-
+mix.webpackConfig(
+    config,
+)
 
 let themes = [
     'resources/sass/themes/default-theme.scss',
@@ -51,27 +63,31 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .js('resources/js/home.js', 'public/js')
     .sass('resources/sass/home.scss', 'public/css')
-    // .js('resources/js/vendor/jquery-3.3.1.min.js', 'public/js')
-    // .js('resources/js/vendor/imagesloaded.min.js', 'public/js')
-    // .js('resources/js/vendor/masonry.js', 'public/js')
+// .js('resources/js/vendor/jquery-3.3.1.min.js', 'public/js')
+// .js('resources/js/vendor/imagesloaded.min.js', 'public/js')
+// .js('resources/js/vendor/masonry.js', 'public/js')
+// mix.extract(['jquery','vue','bootstrap']);
 
+// mix.autoload({
+//     jquery: ['$', 'window.jQuery', 'jQuery', 'jquery'],
+//     vue: ['Vue', 'window.Vue'],
+//
+// })
 if (mix.inProduction()) {
     mix.version();
-    mix.options({
-        uglify: {
-            uglifyOptions: {
-                sourceMap: false, // 关闭资源映射
-                compress: {
-                    warnings: false,
-                    drop_console: true // 去除控制台输出代码
-                },
-                output: {
-                    comments: false // 去除所有注释
-                }
-            }
-        }
-    });
-
+    // mix.options({
+    //     uglify: {
+    //         uglifyOptions: {
+    //             sourceMap: false, // 关闭资源映射
+    //             compress: {
+    //                 warnings: false,
+    //                 drop_console: true // 去除控制台输出代码
+    //             },
+    //             output: {
+    //                 comments: false // 去除所有注释
+    //             }
+    //         }
+    //     }
+    // });
 }
 
-mix.webpackConfig(config)
