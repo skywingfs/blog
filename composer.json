@@ -20,10 +20,9 @@
         "laravel/tinker": "~1.0",
         "league/fractal": "^0.17",
         "league/html-to-markdown": "^4.8",
-        "littlesqx/douban-book": "^1.0",
         "predis/predis": "^1.1",
         "skywing/douban-resource": "^1.0",
-        "spatie/laravel-backup": "^5.11",
+        "spatie/laravel-backup": "5.11",
         "spatie/laravel-permission": "^2.23",
         "yzalis/identicon": "^1.2"
     },
