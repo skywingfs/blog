@@ -173,6 +173,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Jcc\LaravelVote\VoteServiceProvider::class,
         JellyBool\Flysystem\Upyun\UpyunServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
 
         /*
          * Application Service Providers...
